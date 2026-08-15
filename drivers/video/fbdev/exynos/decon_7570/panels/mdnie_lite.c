@@ -499,9 +499,6 @@ static ssize_t sensorRGB_store(struct device *dev,
 		return ret;
 
 	if (mdnie->enable
-		&& mdnie->accessibility == ACCESSIBILITY_OFF
-		&& mdnie->mode == AUTO
-		&& (mdnie->scenario == BROWSER_MODE || mdnie->scenario == EBOOK_MODE)) {
 		dev_info(dev, "%s: %d, %d, %d\n", __func__, white_r, white_g, white_b);
 
 		table = mdnie_find_table(mdnie);
